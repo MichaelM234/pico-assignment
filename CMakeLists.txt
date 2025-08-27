@@ -6,7 +6,10 @@ project(PicoTemplate)
 
 pico_sdk_init()
 
-add_executable(PicoTemplate main.cpp)
+add_executable(PicoTemplate
+    main.cpp
+    main.S
+)
 
 # Link with the pico stdlib
 target_link_libraries(PicoTemplate pico_stdlib hardware_adc)

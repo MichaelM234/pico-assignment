@@ -1,0 +1,21 @@
+# ninja log v5
+1	15	1756251872786248236	picotool-populate-prefix/src/picotool-populate-stamp/picotool-populate-mkdir	c49a869cfd23039d
+1	15	1756251872786248236	/workspaces/pico-assignment/build/_deps/picotool-subbuild/picotool-populate-prefix/src/picotool-populate-stamp/picotool-populate-mkdir	c49a869cfd23039d
+15	721	1756251873492248206	picotool-populate-prefix/src/picotool-populate-stamp/picotool-populate-download	2b40027816a1f085
+15	721	1756251873492248206	/workspaces/pico-assignment/build/_deps/picotool-subbuild/picotool-populate-prefix/src/picotool-populate-stamp/picotool-populate-download	2b40027816a1f085
+721	736	0	picotool-populate-prefix/src/picotool-populate-stamp/picotool-populate-update	91000aa1eae000ba
+721	736	0	/workspaces/pico-assignment/build/_deps/picotool-subbuild/picotool-populate-prefix/src/picotool-populate-stamp/picotool-populate-update	91000aa1eae000ba
+736	750	1756251873521248205	picotool-populate-prefix/src/picotool-populate-stamp/picotool-populate-patch	5cdcc3e631c2ca8a
+736	750	1756251873521248205	/workspaces/pico-assignment/build/_deps/picotool-subbuild/picotool-populate-prefix/src/picotool-populate-stamp/picotool-populate-patch	5cdcc3e631c2ca8a
+750	763	1756251873535248204	picotool-populate-prefix/src/picotool-populate-stamp/picotool-populate-configure	df454a975f061f00
+750	763	1756251873535248204	/workspaces/pico-assignment/build/_deps/picotool-subbuild/picotool-populate-prefix/src/picotool-populate-stamp/picotool-populate-configure	df454a975f061f00
+763	777	1756251873549248204	picotool-populate-prefix/src/picotool-populate-stamp/picotool-populate-build	de6a25d5275486b8
+763	777	1756251873549248204	/workspaces/pico-assignment/build/_deps/picotool-subbuild/picotool-populate-prefix/src/picotool-populate-stamp/picotool-populate-build	de6a25d5275486b8
+777	791	1756251873562248203	picotool-populate-prefix/src/picotool-populate-stamp/picotool-populate-install	559f7fe834ab8ea9
+777	791	1756251873562248203	/workspaces/pico-assignment/build/_deps/picotool-subbuild/picotool-populate-prefix/src/picotool-populate-stamp/picotool-populate-install	559f7fe834ab8ea9
+791	805	1756251873576248202	picotool-populate-prefix/src/picotool-populate-stamp/picotool-populate-test	f0293d99f7b985a6
+791	805	1756251873576248202	/workspaces/pico-assignment/build/_deps/picotool-subbuild/picotool-populate-prefix/src/picotool-populate-stamp/picotool-populate-test	f0293d99f7b985a6
+805	828	1756251873599248201	CMakeFiles/picotool-populate-complete	3d3a55ab3ed755a6
+805	828	1756251873599248201	picotool-populate-prefix/src/picotool-populate-stamp/picotool-populate-done	3d3a55ab3ed755a6
+805	828	1756251873599248201	/workspaces/pico-assignment/build/_deps/picotool-subbuild/CMakeFiles/picotool-populate-complete	3d3a55ab3ed755a6
+805	828	1756251873599248201	/workspaces/pico-assignment/build/_deps/picotool-subbuild/picotool-populate-prefix/src/picotool-populate-stamp/picotool-populate-done	3d3a55ab3ed755a6
