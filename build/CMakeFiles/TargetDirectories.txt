@@ -1,4 +1,6 @@
 /workspaces/pico-assignment/build/CMakeFiles/PicoTemplate.dir
+/workspaces/pico-assignment/build/CMakeFiles/picotoolForceReconfigure.dir
+/workspaces/pico-assignment/build/CMakeFiles/picotoolBuild.dir
 /workspaces/pico-assignment/build/CMakeFiles/edit_cache.dir
 /workspaces/pico-assignment/build/CMakeFiles/rebuild_cache.dir
 /workspaces/pico-assignment/build/pico-sdk/CMakeFiles/edit_cache.dir
