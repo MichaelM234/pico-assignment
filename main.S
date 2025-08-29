@@ -1,13 +1,8 @@
-/* RP2040 bar-graph + potentiometer (ADC0 on GP26)
- * Uses allowed SDK helpers via C (gpio_init, sleep_ms) and via wrappers
- * for gpio_set_dir / gpio_put so we have linkable symbols.
- */
-
 .syntax unified
 .cpu cortex-m0plus
 .thumb
 
-/* ------- C functions we call ------- */
+/* C functions */
 .global gpio_init
 .global sleep_ms
 
@@ -21,7 +16,7 @@
 /* entry from C */
 .global main_asm
 
-/* --------- constants --------- */
+/* constants */
 .equ LED_BASE_PIN,     2
 .equ LED_COUNT,        10
 
@@ -44,7 +39,7 @@
 
 .equ LOOP_DELAY_MS,    40
 
-/* --------- shared data --------- */
+/*  shared data  */
 .data
 .align 4
 .global adc_value
@@ -54,11 +49,11 @@ adc_value:
 .text
 .thumb
 
-/* ---------------- main_asm ---------------- */
+/*  main_asm  */
 main_asm:
   push {r4-r7, lr}
 
-  /* ---------- Init bar-graph GPIOs GP2..GP11 ---------- */
+  /*  Init bar-graph GPIOs GP2..GP11  */
   movs  r4, #LED_BASE_PIN        /* current pin */
   movs  r5, #LED_COUNT           /* remaining */
 
@@ -81,7 +76,7 @@ main_asm:
   subs  r5, #1
   bne   1b
 
-  /* ---------- Bring ADC out of reset ---------- */
+  /* ADC out of reset  */
   ldr   r0, =RESETS_RESET
   ldr   r1, [r0]
   ldr   r2, =RESETS_ADC_BIT
@@ -96,7 +91,7 @@ main_asm:
   ands  r1, r1, r3
   beq   2b
 
-  /* ---------- Enable ADC, CH0 (GPIO26) ---------- */
+  /*  Enable ADC, CH0 (GPIO26)  */
   ldr   r3, =ADC_CS
   movs  r0, #0
   ldr   r1, =CS_ERR_STICKY
@@ -112,7 +107,7 @@ main_asm:
   ands  r1, r1, r2
   beq   3b
 
-  /* ---------- Main loop ---------- */
+  /*  Main loop  */
 loop_top:
   /* start one conversion */
   ldr   r1, [r3]
@@ -147,7 +142,7 @@ loop_top:
   bl    __aeabi_uidiv
   mov   r7, r0                 /* leds_on (0..10) */
 
-  /* --------- Update LEDs GP2..GP11 --------- */
+  /*  Update LEDs GP2..GP11  */
   movs  r4, #LED_BASE_PIN
   movs  r5, #0                 /* i = 0 */
 
