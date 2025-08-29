@@ -1,22 +1,27 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.13)
 
+# Point to the Pico SDK inside your repo
+set(PICO_SDK_PATH "${CMAKE_CURRENT_SOURCE_DIR}/pico-sdk")
+
+# Include the SDK
 include(pico-sdk/pico_sdk_init.cmake)
 
-project(PicoTemplate)
+project(pico_assignment C CXX ASM)
 
+# Initialize the SDK
 pico_sdk_init()
 
-add_executable(PicoTemplate
-    main.cpp
+# Add your executable
+add_executable(pico_assignment
+    main.c
     main.S
 )
 
-# Link with the pico stdlib
-target_link_libraries(PicoTemplate pico_stdlib hardware_adc)
+# Link with standard libraries and ADC
+target_link_libraries(pico_assignment
+    pico_stdlib
+    hardware_adc
+)
 
-# Create map/bin/hex/uf2 files
-pico_add_extra_outputs(PicoTemplate)
-
-# Enable USB serial
-pico_enable_stdio_usb(PicoTemplate 1)
-pico_enable_stdio_uart(PicoTemplate 0)
+# Optional: generate UF2 / BIN outputs
+pico_add_extra_outputs(pico_assignment)

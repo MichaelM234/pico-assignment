@@ -1,19 +1,16 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
+#include "hardware/gpio.h"
 
-// Declare your assembly entry point
-#include <stdio.h>
-#include "pico/stdlib.h"
-// Must declare the main assembly entry point before use.
-void main_asm();
-/**
-* @brief Supplemental Assignment...
-*
-* @return int Returns exit-status zero on completion.
-*/
-int main() {
- // Jump into the main assembly code subroutine that implements the project.
- main_asm();
- // Returning zero indicates everything went okay.
- return 0;
+// --- linkable wrappers for inline-only SDK functions ---
+void gpio_set_dir_wrapper(uint gpio, bool out) { gpio_set_dir(gpio, out); }
+void gpio_put_wrapper(uint gpio, bool value)   { gpio_put(gpio, value);  }
+
+// main assembly entry point
+void main_asm(void);
+
+int main(void) {
+  stdio_init_all();
+  main_asm();
+  return 0;
 }

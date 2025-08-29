@@ -169,7 +169,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=PicoTemplate
+CMAKE_PROJECT_NAME:STATIC=pico_assignment
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/arm-none-eabi-ranlib
@@ -325,13 +325,13 @@ PICO_STDIO_USB:BOOL=OFF
 PIOASM_INSTALL_DIR:PATH=/workspaces/pico-assignment/build/pioasm-install
 
 //Value Computed by CMake
-PicoTemplate_BINARY_DIR:STATIC=/workspaces/pico-assignment/build
+pico_assignment_BINARY_DIR:STATIC=/workspaces/pico-assignment/build
 
 //Value Computed by CMake
-PicoTemplate_IS_TOP_LEVEL:STATIC=ON
+pico_assignment_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-PicoTemplate_SOURCE_DIR:STATIC=/workspaces/pico-assignment
+pico_assignment_SOURCE_DIR:STATIC=/workspaces/pico-assignment
 
 //Value Computed by CMake
 pico_sdk_BINARY_DIR:STATIC=/workspaces/pico-assignment/build/pico-sdk
